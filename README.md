@@ -184,49 +184,287 @@ Animal
 
 ---
 
-# Technologies Used
+# Java Collections Framework - Day 2
 
-* Java
-* OOP Concepts
-* Collections Framework
-* IntelliJ IDEA / VS Code / Command Line
-* Git
-* GitHub
+## Overview
 
----
+This project focuses on understanding and practicing the Java Collections Framework, one of the most important components of Java backend development.
 
-# Learning Outcomes
+The objective of this activity is to learn how to efficiently store, manage, retrieve, and manipulate data using collection classes such as `ArrayList` and `HashMap`.
 
-After completing this activity, the following concepts were understood:
+These concepts are heavily used in:
 
-* How Java programs execute internally
-* Difference between stack and heap memory
-* Real usage of OOP concepts
-* How objects interact with methods
-* Basic class design principles
-* Using collections like ArrayList
-* Writing structured Java programs
-* Importance of debugging and clean coding
-
----
-
-# Future Improvements
-
-This project will be expanded in future learning phases with:
-
-* Exception handling
-* File handling
-* Collections deep dive
-* Streams API
-* Multithreading
-* JDBC
-* Spring Boot
+* Backend Development
+* Spring Boot Applications
 * REST APIs
-* Database integration
-* Docker
-* Cloud deployment
+* Microservices
+* Caching Systems
+* Enterprise Applications
 
 ---
+
+# Learning Objectives
+
+By completing this activity, the following concepts were explored:
+
+* Java Collections Framework
+* List Interface
+* ArrayList
+* LinkedList (Conceptual Understanding)
+* Map Interface
+* HashMap
+* Time Complexity Basics
+* equals() vs ==
+* Real-world Data Management Scenarios
+
+---
+
+# Collections Framework Overview
+
+The Java Collections Framework provides a set of interfaces and classes used to store and manipulate groups of objects dynamically.
+
+```text
+Collection
+│
+├── List
+│   ├── ArrayList
+│   └── LinkedList
+│
+├── Set
+│   └── HashSet
+│
+└── Queue
+
+Map
+└── HashMap
+```
+
+---
+
+# 1. ArrayList
+
+## Description
+
+`ArrayList` is a resizable array implementation that allows dynamic storage of elements.
+
+### Features
+
+* Maintains insertion order
+* Allows duplicate values
+* Dynamic size
+* Fast element access using index
+* Widely used in backend applications
+
+### Common Operations
+
+```java
+add()
+get()
+remove()
+size()
+contains()
+```
+
+### Time Complexity
+
+| Operation | Complexity |
+| --------- | ---------- |
+| Add       | O(1)       |
+| Get       | O(1)       |
+| Search    | O(n)       |
+| Remove    | O(n)       |
+
+---
+
+# 2. LinkedList
+
+## Description
+
+`LinkedList` stores elements as nodes connected through references.
+
+### Features
+
+* Efficient insertion and deletion
+* Sequential access
+* Higher memory consumption compared to ArrayList
+
+### Comparison
+
+| Feature       | ArrayList | LinkedList |
+| ------------- | --------- | ---------- |
+| Access        | Fast      | Slow       |
+| Insert/Delete | Slower    | Faster     |
+| Memory Usage  | Lower     | Higher     |
+
+---
+
+# 3. HashMap
+
+## Description
+
+`HashMap` stores data in key-value pairs and provides fast retrieval using keys.
+
+### Features
+
+* Stores key-value pairs
+* Unique keys
+* Fast lookup operations
+* Allows one null key
+* Commonly used in enterprise applications
+
+### Common Operations
+
+```java
+put()
+get()
+remove()
+containsKey()
+containsValue()
+```
+
+### Example
+
+```java
+HashMap<Integer, String> employees = new HashMap<>();
+
+employees.put(101, "Joseph");
+employees.put(102, "John");
+
+System.out.println(employees.get(101));
+```
+
+### Time Complexity
+
+| Operation | Complexity |
+| --------- | ---------- |
+| Put       | O(1)       |
+| Get       | O(1)       |
+| Remove    | O(1)       |
+
+---
+
+# 4. equals() vs ==
+
+Understanding the difference between object comparison methods is important when working with collections.
+
+### ==
+
+Compares memory references.
+
+```java
+obj1 == obj2
+```
+
+### equals()
+
+Compares object content.
+
+```java
+obj1.equals(obj2)
+```
+
+### Example
+
+```java
+String a = new String("Java");
+String b = new String("Java");
+
+System.out.println(a == b);       // false
+System.out.println(a.equals(b));  // true
+```
+
+---
+
+# Practical Exercises
+
+## Exercise 1 - Student List Manager
+
+### Features
+
+* Add Student
+* Display Students
+* Search Student by ID
+* Remove Student
+
+### Concepts Used
+
+* ArrayList
+* Classes and Objects
+* Loops
+* Conditional Statements
+
+---
+
+## Exercise 2 - Employee Directory
+
+### Features
+
+* Add Employee
+* Search Employee
+* Remove Employee
+
+### Concepts Used
+
+* HashMap
+* Key-Value Storage
+* Data Retrieval
+
+---
+
+## Exercise 3 - Word Frequency Counter
+
+### Input
+
+```text
+apple banana apple mango banana apple
+```
+
+### Output
+
+```text
+apple = 3
+banana = 2
+mango = 1
+```
+
+### Concepts Used
+
+* HashMap
+* Counting Algorithms
+* Iteration
+
+---
+
+# Real-World Applications
+
+The concepts learned in this activity are commonly used in:
+
+### ArrayList
+
+* API Response Handling
+* Database Result Processing
+* User Management Systems
+* Order Management Systems
+
+### HashMap
+
+* Caching
+* Configuration Management
+* Session Management
+* Data Lookup Operations
+* Microservices Communication
+
+---
+
+
+
+
+
+
+
+
+
+
 
 
 
